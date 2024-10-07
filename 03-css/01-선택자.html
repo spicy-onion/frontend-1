@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 | css</title>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>선택자</h2>
+
+    <!-- 심플 선택자 -->
+    <h1 id="logo" class="logo just">logo</h1>
+    <style>
+      h1 {
+        color: red;
+      }
+      #logo {
+        color: blue;
+      }
+      .logo {
+        color: green;
+      }
+      h1#logo {
+        color: yellow;
+      }
+      #logo.logo {
+        color: pink;
+      }
+      .logo.just {
+        color: purple;
+      }
+    </style>
+
+    <!-- 자손 선택 : 공백 -->
+    <div class="sel1">
+      <p class="child-g child">자식</p>
+      <p class="child-g child">자식</p>
+      <section><p class="child-g grandchild">손자</p></section>
+    </div>
+    <style>
+      .sel1 .child-g {
+        color: red;
+      }
+      .sel1 .child {
+        color: blue;
+      }
+      .sel1 .grandchild {
+        color: green;
+      }
+    </style>
+    <hr />
+
+    <!-- 인접 형제 선택기 (+) -->
+    <input type="checkbox" id="term1" name="term1" checked />
+    <label for="term1">이용약관</label>
+    <br />
+    <input type="checkbox" id="term2" name="term2" />
+    <label for="term2">개인정보처리방침</label>
+    <style>
+      input:checked + label {
+        color: red;
+      }
+    </style>
+    <hr />
+
+    <!-- 상태 선택기 (:상태값) -->
+    <a href="#" class="btn">버튼</a>
+    <style>
+      .btn {
+        display: block;
+        width: 100px;
+        height: 50px;
+        background: blue;
+        color: #fff;
+      }
+      .btn:hover {
+        background: red;
+      }
+    </style>
+    <hr />
+    <!-- 가상 클래스 -->
+    <ul class="nav1">
+      <li>menu1 <span>|</span></li>
+      <li>menu2 <span>|</span></li>
+      <li>menu3 <span>|</span></li>
+      <li>menu4 <span>|</span></li>
+    </ul>
+    <style>
+      .nav1 {
+        display: flex;
+        list-style: none;
+      }
+      .nav1 li:first-child {
+        color: blue;
+      }
+      .nav1 li:last-child {
+        color: red;
+      }
+      .nav1 li:last-child span {
+        display: none;
+      }
+    </style>
+
+    <hr />
+    <input type="text" class="inp" placeholder="나를 클릭하세요." />
+    <style>
+      .inp {
+        height: 50px;
+        padding: 0 20px;
+        border: 3px solid #777;
+      }
+    </style>
+  </body>
+</html>
