@@ -8,9 +8,13 @@
     <script src="./js/script.js"></script>
   </head>
   <body>
+    <div id="u_skip">
+      <a href="#gnb">주메뉴 바로가기</a>
+      <a href="#container">본문 바로가기</a>
+    </div>
     <div id="wrap">
       <header id="header">
-        <h1>
+        <h1 id="logo" class="logo">
           <a href="/">just쇼핑몰</a>
         </h1>
         <nav id="gnb">
@@ -58,13 +62,66 @@
           </li>
           <li>
             <a href="#">
-              <img src="./images/slide3.png" alt="핏을 잡아주는...." />
+              <img src="./images/slide3.jpg" alt="핏을 잡아주는...." />
             </a>
           </li>
         </ul>
       </div>
-      <main id="container"></main>
-      <footer id="footer"></footer>
+      <main id="container">
+        <section>
+          <h2>공지사항</h2>
+          <div>
+            <ul>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+              <li>
+                <a href="#">Lorem ipsum dolor sit amet.</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section>
+          <h2>배너</h2>
+          <div>
+            <a href="#">
+              <img src="./images/bnr.jpg" alt="검색어를 입력해주세요." />
+            </a>
+          </div>
+        </section>
+        <section>
+          <h2>바로가기</h2>
+          <div>
+            <ul>
+              <li><a href="#">goto1</a></li>
+              <li><a href="#">goto2</a></li>
+              <li><a href="#">goto3</a></li>
+              <li><a href="#">goto4</a></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <footer id="footer">
+        <div class="logo">just쇼핑몰</div>
+        <address>&#169;copyright</address>
+        <div>
+          <a href="#">facebook</a>
+          <a href="#">youtube</a>
+          <a href="#">blog</a>
+        </div>
+      </footer>
+    </div>
+    <div id="modal">
+      <div>
+        <h2>모달 제목</h2>
+        <p>모달 내용</p>
+      </div>
     </div>
   </body>
 </html>
