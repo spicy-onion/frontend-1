@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>선택자 | css</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
   </head>
   <body>
     <h1>css</h1>
@@ -81,12 +82,16 @@
     <hr />
     <!-- 가상 클래스 -->
     <ul class="nav1">
-      <li>menu1 <span>|</span></li>
-      <li>menu2 <span>|</span></li>
-      <li>menu3 <span>|</span></li>
-      <li>menu4 <span>|</span></li>
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
     </ul>
     <style>
+      .nav1 li::after {
+        content: "|";
+      }
+
       .nav1 {
         display: flex;
         list-style: none;
@@ -127,11 +132,45 @@
       <li>menu4</li>
     </ul>
     <style>
+      .list2 {
+        list-style: none;
+      }
       .list2::before {
         content: "ul 앞에 내용";
+        color: red;
       }
       .list2::after {
         content: "ul 뒤에 내용";
+        color: blue;
+      }
+      .list2 li::before {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+        background: purple;
+      }
+      .list2 li::after {
+        content: "\f1b0";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+      }
+    </style>
+
+    <ul class="list3">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+    </ul>
+    <style>
+      .list3 {
+        list-style: none;
+      }
+      .list3 li::before {
+        content: "\f105";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
       }
     </style>
   </body>
