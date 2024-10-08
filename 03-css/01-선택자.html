@@ -118,5 +118,21 @@
         color: #fff;
       }
     </style>
+
+    <!-- 가상선택자 ::before, ::after -->
+    <ul class="list2">
+      <li>menu1</li>
+      <li>menu2</li>
+      <li>menu3</li>
+      <li>menu4</li>
+    </ul>
+    <style>
+      .list2::before {
+        content: "ul 앞에 내용";
+      }
+      .list2::after {
+        content: "ul 뒤에 내용";
+      }
+    </style>
   </body>
 </html>
