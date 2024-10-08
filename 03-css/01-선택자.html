@@ -54,13 +54,24 @@
 
     <!-- 인접 형제 선택기 (+) -->
     <input type="checkbox" id="term1" name="term1" checked />
-    <label for="term1">이용약관</label>
+    <label for="term1" class="label">이용약관</label>
     <br />
     <input type="checkbox" id="term2" name="term2" />
-    <label for="term2">개인정보처리방침</label>
+    <label for="term2" class="label">개인정보처리방침</label>
     <style>
-      input:checked + label {
+      .label::before {
+        content: "";
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid red;
+      }
+
+      input:checked + .label {
         color: red;
+      }
+      input:checked + .label::before {
+        background: blue;
       }
     </style>
     <hr />
@@ -88,8 +99,12 @@
       <li>menu4</li>
     </ul>
     <style>
+      .nav1 li:last-child::after {
+        display: none;
+      }
       .nav1 li::after {
         content: "|";
+        margin: 0 10px;
       }
 
       .nav1 {
@@ -171,6 +186,19 @@
         content: "\f105";
         font-family: "Line Awesome Free";
         font-weight: 900;
+      }
+    </style>
+
+    <!-- 속성 선택자 [] -->
+    <a href="#">네이버</a>
+    <a href="#" target="_blank">네이버</a>
+    <a href="#" target="_top">네이버</a>
+    <style>
+      a[target] {
+        color: red;
+      }
+      a[target="_blank"] {
+        color: green;
       }
     </style>
   </body>
